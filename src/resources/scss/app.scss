@@ -1,0 +1,280 @@
+@import './_variable';
+@import '../views/product/_product.scss';
+@import './_button';
+// header
+body {
+  background: #f8f9fa !important;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+// nav_top
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+.nav-top {
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #dc143c;
+  & > ul {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    & > li {
+      margin-left: 10px;
+      & > a {
+        color: white;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.navbar {
+  z-index: 10;
+  background: white !important;
+  display: flex;
+  &-brand {
+    font-family: 'Saira Condensed', sans-serif;
+    display: flex;
+   
+    img {
+      width: 20%;
+      object-fit: cover;
+    }
+    @media only screen and (max-width: 1200px) {
+      img {
+        width: 25%;
+        object-fit: contain;
+      }
+    }
+    &__title {
+      font-size: 26px;
+      font-weight: bold;
+      &-item {
+        font-size: 15px;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -6px;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-search {
+    form {
+      position: relative;
+      width: 30rem;
+      // background: #dc143c;
+      border-bottom: 1px solid #6c757d;
+      // border-radius:  0.7rem;
+    }
+    input,
+    button {
+      height: 2.5rem;
+      font-family: 'Lato', sans-serif;
+      border: 0;
+      color: #2f2f2f;
+      font-size: 1.8rem;
+    }
+    input[type='search'] {
+      outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+      width: 100%;
+      background: white;
+      padding: 0 1.6rem;
+      // border-radius: 0.7rem;
+      appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+      transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
+      transition-property: width, border-radius;
+      z-index: 1;
+      position: relative;
+      font-size: 18px;
+    }
+    button {
+      display: none; // prevent being able to tab to it
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6rem;
+      font-weight: bold;
+      background: #dc143c;
+      color: white;
+      // border-radius: 0 0.7rem 0.7rem 0;
+    }
+    input:not(:placeholder-shown) {
+      // border-radius: 0.7rem 0 0 0.7rem;
+      width: calc(100% - 6rem);
+
+      + button {
+        display: block;
+        font-size: 18px;
+        cursor: pointer;
+      }
+    }
+    label {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 0;
+      border: 0;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+    }
+  }
+  &-cart {
+    width: 15%;
+    img {
+      width: 100%;
+      // margin-top: -8px;
+      object-fit: cover;
+    }
+  }
+  
+}
+//home
+.homepage {
+  .banner {
+    img {
+      width: 100%;
+      height: 75vh;
+      object-fit: cover;
+      margin-top: 5px;
+    }
+  }
+  .product {
+    &__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      text-align: center;
+      height: 15vh;
+    }
+    &__background {
+      background: white;
+      width: 100%;
+      border-radius: 10px;
+      .buy__now,
+      .add__cart {
+        background: #dc143c;
+        border: #dc143c;
+      }
+      .card-body {
+        padding: 0;
+      }
+    }
+  }
+  .introduce {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 45px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      text-align: center;
+      height: 15vh;
+    }
+    &__item {
+      display: flex;
+    }
+    .service-icon {
+      display: flex;
+      justify-content: center;
+      a {
+        border-radius: 50%;
+        border: 10px solid #ececec;
+        padding: 15px;
+      }
+    }
+    .focus-box {
+      .introduce__title {
+        font-size: 20px;
+        height: 70px;
+        &::before {
+          content: ' ';
+          border: 1px solid #dc143c;
+          width: 50%;
+          position: absolute;
+          top: 60%;
+        }
+      }
+      .introduce__content {
+        text-align: center;
+      }
+    }
+    .focus-box {
+      &:nth-child(1) {
+        a:hover {
+          border: 10px solid #ff69b4;
+        }
+      }
+      &:nth-child(2) {
+        a > img {
+          border-radius: 15px;
+        }
+        a:hover {
+          border: 10px solid #7b68ee;
+        }
+      }
+      &:nth-child(3) {
+        a:hover {
+          border: 10px solid #ffa500;
+        }
+      }
+      &:last-child {
+        a:hover {
+          border: 10px solid #008000;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-color: lightblue;
+      }
+    }
+  }
+}
+.col-lg-2_4 {
+  width: 30% !important ;
+}
+@media only screen and (max-width: 576px) {
+  .navbar-brand{
+    justify-content: center;
+    order: 2;
+  } 
+  .navbar-toggler {
+    order: 1;
+  }
+  .navbar-search {
+    order: 3;
+  }
+  .navbar-collapse {
+    order: 4;
+  }
+}
+
+.product_bg {
+  background: white; 
+  width: 100%;
+  height: 100%;
+}
+.product_detail  {
+  display: flex;
+  flex-direction: column;
+}

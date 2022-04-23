@@ -1,0 +1,85 @@
+<div class='header'>
+  <div class='nav-top'>
+    <div class='container'>
+      <div class='nav-top'>
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+            <a class='nav-link navbar-login' href='#'>Đăng nhập
+              <span class='sr-only'>(current)</span></a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link navbar-register' href='#'>Đăng ký</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <div class='navbar navbar-expand-lg navbar-light bg-light'>
+    <div class='container'>
+      <a class='navbar-brand col-lg-3 col-sm-3 col-12' href='/'>
+        <img src='../../img/drug.png' alt='icon' />
+        <div class='navbar-brand__title'>
+          CONVENIENT
+          <div class='navbar-brand__title-item'>
+            PHARMACY
+          </div>
+        </div>
+      </a>
+
+      <div class='navbar navbar-light bg-light col-lg-5 navbar-search col-sm-7'>
+        <form onsubmit='event.preventDefault();' role='search'>
+          <label for='search'>Search for stuff</label>
+          <input
+            id='search'
+            type='search'
+            placeholder='Nhập thuốc cần tìm'
+            autofocus
+            required
+          />
+          <button type='submit'>Tìm kiếm</button>
+        </form>
+      </div>
+
+      <button
+        class='navbar-toggler'
+        type='button'
+        data-toggle='collapse'
+        data-target='#navbarSupportedContent'
+        aria-controls='navbarSupportedContent'
+        aria-expanded='false'
+        aria-label='Toggle navigation'
+      >
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <div
+        class='collapse navbar-collapse col-lg-4 col-sm-4'
+        id='navbarSupportedContent'
+      >
+        <ul class='navbar-nav mr-auto'>
+          <li class='nav-item active'>
+            <a class='nav-link' href='/home'>Trang chủ
+              <span class='sr-only home'>(current)</span></a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='=/home/introduce'>Giới thiệu</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link' href='#'>Sản Phẩm</a>
+          </li>
+
+          <div class='navbar-cart'>
+            <img src='../../img/cart.png' alt='cart' />
+          </div>
+        </ul>
+      </div>
+
+      {{! <div class='navbar-collapses col-lg-3' id='navbarSupportedContent'>
+      
+      <div class='navbar-cart'>
+        <img src='../../img/cart.png' alt='cart' />
+      </div>
+    </div> }}
+    </div>
+  </div>
+</div>

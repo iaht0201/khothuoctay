@@ -1,0 +1,44 @@
+<div class="">
+    <div class="breakcrumb">
+        <div aria-label="breadcrumb ">
+  <ol class="breadcrumb ">
+    <li class="breadcrumb-item "><a href="/">Trang chủ</a></li>
+    <li class="breadcrumb-item"><a href="#">Sản phẩm</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{product.name}}</li>
+  </ol>
+</div>
+    </div>
+    <div class="product">
+       <div class="container">
+           <div class="row product_bg">
+                <div class="col-lg-4 col-sm-1">
+               <img src=" {{product.image}}" alt="image">
+            </div>
+            <div class="col-lg-4 col-sm-1">
+               <div class="prodcut__name">
+                   <h2>{{product.name}} </h2>
+               </div>
+                <div class="prodcut__price">
+                   <h2>{{product.price}}<span>/VNĐ</span> </h2>
+               </div>
+               <div class="product_detail ">
+                   <span> Hoạt chất : {{detail.medicine}}</span>
+                   <span>Công dụng : {{detail.benefit}}</span>
+                   <span>Đối tượng : {{detail.object}}</span>
+                   <span>Hình thức : {{detail.format}}</span>
+                   <span>Thương hiệu : {{detail.brand}}</span>
+                   <span class="note">{{detail.note}}</span>
+                   <div class="btns">
+                       <!-- HTML !-->
+                        <button class="btn" role="button">Mua ngay</button>
+                        <button class="btn" role="button">Thêm vào giỏ hàng</button>
+                   </div>
+               </div>
+            </div>
+            <div class="col-lg-4 col-sm-1">
+                
+            </div>
+           </div>
+       </div>
+    </div>
+</div>

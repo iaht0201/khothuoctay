@@ -1,0 +1,300 @@
+/* CSS */
+.btn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #dc143c;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+.btn:hover, .btn:focus {
+  background-color: #dc143c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.8;
+}
+
+.button-5:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+body {
+  background: #f8f9fa !important;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+.nav-top {
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #dc143c;
+}
+.nav-top > ul {
+  width: 100%;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: row;
+}
+.nav-top > ul > li {
+  margin-left: 10px;
+}
+.nav-top > ul > li > a {
+  color: white;
+  font-size: 12px;
+}
+
+.navbar {
+  z-index: 10;
+  background: white !important;
+  display: flex;
+}
+.navbar-brand {
+  font-family: "Saira Condensed", sans-serif;
+  display: flex;
+}
+.navbar-brand img {
+  width: 20%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 1200px) {
+  .navbar-brand img {
+    width: 25%;
+    object-fit: contain;
+  }
+}
+.navbar-brand__title {
+  font-size: 26px;
+  font-weight: bold;
+}
+.navbar-brand__title-item {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -6px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar-search form {
+  position: relative;
+  width: 30rem;
+  border-bottom: 1px solid #6c757d;
+}
+.navbar-search input,
+.navbar-search button {
+  height: 2.5rem;
+  font-family: "Lato", sans-serif;
+  border: 0;
+  color: #2f2f2f;
+  font-size: 1.8rem;
+}
+.navbar-search input[type=search] {
+  outline: 0;
+  width: 100%;
+  background: white;
+  padding: 0 1.6rem;
+  appearance: none;
+  transition: all 0.3s cubic-bezier(0, 0, 0.43, 1.49);
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+  font-size: 18px;
+}
+.navbar-search button {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6rem;
+  font-weight: bold;
+  background: #dc143c;
+  color: white;
+}
+.navbar-search input:not(:placeholder-shown) {
+  width: calc(100% - 6rem);
+}
+.navbar-search input:not(:placeholder-shown) + button {
+  display: block;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar-search label {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.navbar-cart {
+  width: 15%;
+}
+.navbar-cart img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.homepage .banner img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  margin-top: 5px;
+}
+.homepage .product__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  text-align: center;
+  height: 15vh;
+}
+.homepage .product__background {
+  background: white;
+  width: 100%;
+  border-radius: 10px;
+}
+.homepage .product__background .buy__now,
+.homepage .product__background .add__cart {
+  background: #dc143c;
+  border: #dc143c;
+}
+.homepage .product__background .card-body {
+  padding: 0;
+}
+.homepage .introduce {
+  display: flex;
+  flex-direction: column;
+}
+.homepage .introduce__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  text-align: center;
+  height: 15vh;
+}
+.homepage .introduce__item {
+  display: flex;
+}
+.homepage .introduce .service-icon {
+  display: flex;
+  justify-content: center;
+}
+.homepage .introduce .service-icon a {
+  border-radius: 50%;
+  border: 10px solid #ececec;
+  padding: 15px;
+}
+.homepage .introduce .focus-box .introduce__title {
+  font-size: 20px;
+  height: 70px;
+}
+.homepage .introduce .focus-box .introduce__title::before {
+  content: " ";
+  border: 1px solid #dc143c;
+  width: 50%;
+  position: absolute;
+  top: 60%;
+}
+.homepage .introduce .focus-box .introduce__content {
+  text-align: center;
+}
+.homepage .introduce .focus-box:nth-child(1) a:hover {
+  border: 10px solid #ff69b4;
+}
+.homepage .introduce .focus-box:nth-child(2) a > img {
+  border-radius: 15px;
+}
+.homepage .introduce .focus-box:nth-child(2) a:hover {
+  border: 10px solid #7b68ee;
+}
+.homepage .introduce .focus-box:nth-child(3) a:hover {
+  border: 10px solid #ffa500;
+}
+.homepage .introduce .focus-box:last-child a:hover {
+  border: 10px solid #008000;
+}
+@media only screen and (max-width: 600px) {
+  .homepage .introduce body {
+    background-color: lightblue;
+  }
+}
+
+.col-lg-2_4 {
+  width: 30% !important;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-brand {
+    justify-content: center;
+    order: 2;
+  }
+
+  .navbar-toggler {
+    order: 1;
+  }
+
+  .navbar-search {
+    order: 3;
+  }
+
+  .navbar-collapse {
+    order: 4;
+  }
+}
+.product_bg {
+  background: white;
+  width: 100%;
+  height: 100%;
+}
+
+.product_detail {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=app.css.map */
